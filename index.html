@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tesla X Space Model</title>
+  <title>Tesla X Space Model | Business & Financial Services</title>
 
   <style>
     * {
@@ -16,138 +16,158 @@
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f5f7fa;
+      line-height: 1.7;
+      background: #f4f6f8;
       color: #222;
     }
 
     header {
-      background: #111;
+      background: #101010;
       color: white;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 18px 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
+      text-align: center;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin: 0 8px;
+      font-size: 15px;
     }
 
     nav a:hover {
-      color: #00bcd4;
+      text-decoration: underline;
     }
 
     .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 8%;
-      background: linear-gradient(135deg, #111, #263238);
+      background: linear-gradient(135deg, #111, #333);
       color: white;
+      text-align: center;
+      padding: 90px 20px;
     }
 
-    .hero h1 {
-      font-size: 48px;
+    .hero h2 {
+      font-size: 42px;
       margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 20px;
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
+      font-size: 18px;
     }
 
-    .btn {
+    .button {
       display: inline-block;
-      margin-top: 25px;
-      padding: 13px 25px;
-      background: #00bcd4;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #25D366;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 7px;
       font-weight: bold;
     }
 
+    .button:hover {
+      opacity: 0.85;
+    }
+
     section {
-      padding: 70px 8%;
+      padding: 65px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     section h2 {
       text-align: center;
-      margin-bottom: 35px;
       font-size: 32px;
+      margin-bottom: 25px;
     }
 
     .about {
       max-width: 850px;
       margin: auto;
       text-align: center;
-      font-size: 18px;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
     }
 
-    .card {
+    .service {
       background: white;
-      padding: 30px;
+      padding: 28px;
       border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
+    .service h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .why {
+      background: white;
+      border-radius: 10px;
+      padding: 35px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .why p {
       margin-bottom: 15px;
     }
 
     .contact {
+      background: white;
+      border-radius: 10px;
+      padding: 35px;
       text-align: center;
-      background: #e9eef2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .contact p {
-      margin: 10px 0;
+      margin: 12px 0;
+    }
+
+    .contact a {
+      color: #111;
+    }
+
+    .disclaimer {
+      background: #eeeeee;
+      padding: 30px 20px;
+      font-size: 13px;
+      color: #555;
+      text-align: center;
     }
 
     footer {
-      background: #111;
+      background: #101010;
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 25px 15px;
     }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-      }
-
-      nav {
-        margin-top: 10px;
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 31px;
       }
 
       nav a {
-        margin: 5px;
         display: inline-block;
-      }
-
-      .hero h1 {
-        font-size: 36px;
+        margin: 5px;
       }
     }
   </style>
@@ -155,96 +175,252 @@
 
 <body>
 
-  <header>
-    <div class="logo">Tesla X Space Model</div>
+<header>
+  <h1>Tesla X Space Model</h1>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="hero" id="home">
-    <div>
-      <h1>Tesla X Space Model</h1>
+
+<section class="hero" id="home">
+
+  <h2>Building Opportunities. Supporting Growth.</h2>
+
+  <p>
+    Tesla X Space Model is a modern business platform focused on
+    investment opportunities, automobile sales, cryptocurrency,
+    financial development and related business services.
+  </p>
+
+  <a class="button"
+     href="https://wa.me/27618285727"
+     target="_blank">
+     Chat With Us on WhatsApp
+  </a>
+
+</section>
+
+
+<section id="about">
+
+  <h2>About Tesla X Space Model</h2>
+
+  <div class="about">
+
+    <p>
+      Tesla X Space Model is a growing business platform committed
+      to providing professional services and connecting individuals
+      with opportunities across different areas of business and finance.
+    </p>
+
+    <br>
+
+    <p>
+      Our areas of focus include investment opportunities, automobile
+      sales, cryptocurrency trading, financial development and
+      insurance-related services.
+    </p>
+
+    <br>
+
+    <p>
+      We believe that access to useful information, responsible
+      decision-making and quality customer support are important
+      foundations for long-term growth.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="services">
+
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="service">
+      <h3>Investment</h3>
 
       <p>
-        Welcome to Tesla X Space Model — a modern business platform
-        designed to showcase our work, services and business information.
+        We provide information and support relating to investment
+        opportunities and help clients understand available options
+        before making financial decisions.
       </p>
-
-      <a href="#contact" class="btn">Contact Us</a>
     </div>
-  </section>
 
-  <section id="about">
-    <h2>About Us</h2>
 
-    <div class="about">
+    <div class="service">
+      <h3>Automobile Sales</h3>
+
       <p>
-        Tesla X Space Model is a growing business focused on providing
-        quality services and creating valuable solutions for our customers.
-        We are committed to professionalism, reliability and customer
-        satisfaction.
+        We assist customers interested in automobile sales by
+        providing information and support throughout the purchasing
+        process.
       </p>
     </div>
-  </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
 
-    <div class="services">
+    <div class="service">
+      <h3>Cryptocurrency Trading</h3>
 
-      <div class="card">
-        <h3>Business Services</h3>
-        <p>
-          We provide professional services designed to meet the needs
-          of our customers.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Consultation</h3>
-        <p>
-          Contact us for information and guidance about our services
-          and business opportunities.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Customer Support</h3>
-        <p>
-          We are available to answer questions and provide assistance
-          to our customers.
-        </p>
-      </div>
-
+      <p>
+        We provide information and support relating to cryptocurrency
+        markets and digital assets for individuals interested in
+        understanding this evolving financial sector.
+      </p>
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
 
-    <p><strong>Business:</strong> Tesla X Space Model</p>
+    <div class="service">
+      <h3>Financial Development</h3>
 
-    <p><strong>Email:</strong> your-email@example.com</p>
+      <p>
+        We help individuals explore business and financial opportunities
+        while encouraging responsible financial planning and informed
+        decision-making.
+      </p>
+    </div>
 
-    <p><strong>Phone:</strong> +234 XXX XXX XXXX</p>
 
-    <!-- Replace the number below with your WhatsApp number -->
-    <a
-      class="btn"
-      href="https://wa.me/234XXXXXXXXXX"
-      target="_blank">
-      Chat With Us on WhatsApp
+    <div class="service">
+      <h3>Insurance Services</h3>
+
+      <p>
+        We provide information and assistance relating to insurance
+        services and help clients understand available options.
+      </p>
+    </div>
+
+
+    <div class="service">
+      <h3>Business Consultation</h3>
+
+      <p>
+        Contact us to learn more about our services, business activities
+        and available opportunities.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="why-us">
+
+  <h2>Why Choose Us?</h2>
+
+  <div class="why">
+
+    <p>
+      <strong>Professional Service:</strong>
+      We aim to provide clear information and responsive customer support.
+    </p>
+
+    <p>
+      <strong>Customer Focused:</strong>
+      We listen to our clients and strive to provide useful solutions
+      based on their needs.
+    </p>
+
+    <p>
+      <strong>Multiple Services:</strong>
+      Our platform covers investment, automobiles, cryptocurrency,
+      financial development and insurance-related services.
+    </p>
+
+    <p>
+      <strong>Responsible Approach:</strong>
+      We encourage clients to understand opportunities, risks and
+      relevant terms before making financial decisions.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2>Our Mission</h2>
+
+  <div class="about">
+
+    <p>
+      Our mission is to build a professional business platform that
+      connects people with opportunities, provides useful information
+      and supports individuals as they work toward their business
+      and financial goals.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="contact">
+
+  <h2>Contact Us</h2>
+
+  <div class="contact">
+
+    <p>
+      <strong>Business:</strong>
+      Tesla X Space Model
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:Spacemodelteslax@gmail.com">
+        Spacemodelteslax@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <strong>WhatsApp:</strong>
+      +27 61 828 5727
+    </p>
+
+    <a class="button"
+       href="https://wa.me/27618285727"
+       target="_blank">
+       Contact Us on WhatsApp
     </a>
-  </section>
 
-  <footer>
-    <p>© 2026 Tesla X Space Model. All Rights Reserved.</p>
-  </footer>
+  </div>
+
+</section>
+
+
+<div class="disclaimer">
+
+  <strong>Important Information</strong>
+
+  <p>
+    Investment and cryptocurrency activities involve financial risk.
+    Tesla X Space Model does not guarantee profits or financial returns.
+    Clients should conduct appropriate research and consider seeking
+    professional financial advice before making investment decisions.
+  </p>
+
+</div>
+
+
+<footer>
+
+  <p>
+    © 2026 Tesla X Space Model. All Rights Reserved.
+  </p>
+
+</footer>
 
 </body>
 </html>
