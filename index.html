@@ -1,426 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tesla X Space Model | Business & Financial Services</title>
+<title>Tesla X Space Model | Business & Financial Services</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+<meta name="description" content="Tesla X Space Model provides business opportunities, automobile sales, cryptocurrency information, financial development and business consultation.">
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      background: #f4f6f8;
-      color: #222;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070b14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 8, 18, 0.96);
+    border-bottom: 1px solid #20283a;
+    padding: 14px 6%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #38bdf8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(56,189,248,0.45);
+}
+
+.logo-icon::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 18px;
+    border: 1px solid #38bdf8;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.logo-text {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: #38bdf8;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at top right, rgba(14,165,233,0.18), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(59,130,246,0.12), transparent 35%);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #38bdf8;
+    border-radius: 30px;
+    color: #38bdf8;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 78px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 18px;
+    max-width: 680px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #38bdf8;
+    color: #06101b;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56,189,248,0.3);
+}
+
+.secondary {
+    border: 1px solid #475569;
+    color: white;
+}
+
+.secondary:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #94a3b8;
+}
+
+/* ABOUT */
+.about {
+    background: #0b1120;
+}
+
+.about-box {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-box p {
+    color: #cbd5e1;
+    margin-bottom: 18px;
+}
+
+/* SERVICES */
+.services {
+    background: #070b14;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    background: #0d1424;
+    border: 1px solid #1e293b;
+    padding: 30px 25px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.service-card p {
+    color: #94a3b8;
+}
+
+/* WHY US */
+.why {
+    background: #0b1120;
+}
+
+.why-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.why-item {
+    padding: 25px;
+    background: #101827;
+    border-radius: 12px;
+    border-left: 3px solid #38bdf8;
+}
+
+.why-item h3 {
+    margin-bottom: 8px;
+}
+
+.why-item p {
+    color: #94a3b8;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    background:
+        linear-gradient(rgba(7,11,20,0.88), rgba(7,11,20,0.95)),
+        radial-gradient(circle, #075985, #070b14);
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* CONTACT */
+.contact {
+    background: #070b14;
+}
+
+.contact-box {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    gap: 18px;
+}
+
+.contact-item {
+    background: #0d1424;
+    border: 1px solid #1e293b;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #38bdf8;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #38bdf8;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+    background: #0b1120;
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+}
+
+.disclaimer p {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    background: #050811;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    background: #25D366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 27px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
 
     header {
-      background: #101010;
-      color: white;
-      padding: 18px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      text-align: center;
+        padding: 12px 5%;
     }
 
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 8px;
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+        margin: 0 7px;
+        font-size: 12px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #111, #333);
-      color: white;
-      text-align: center;
-      padding: 90px 20px;
-    }
-
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
+        padding: 70px 6%;
+        min-height: 80vh;
     }
 
     .hero p {
-      max-width: 750px;
-      margin: auto;
-      font-size: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      opacity: 0.85;
+        font-size: 16px;
     }
 
     section {
-      padding: 65px 20px;
-      max-width: 1100px;
-      margin: auto;
+        padding: 65px 6%;
     }
 
-    section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 25px;
+    .section-title h2 {
+        font-size: 30px;
     }
 
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
+    .cta h2 {
+        font-size: 32px;
     }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
-      margin-top: 30px;
-    }
-
-    .service {
-      background: white;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .service h3 {
-      margin-bottom: 12px;
-      font-size: 21px;
-    }
-
-    .why {
-      background: white;
-      border-radius: 10px;
-      padding: 35px;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .why p {
-      margin-bottom: 15px;
-    }
-
-    .contact {
-      background: white;
-      border-radius: 10px;
-      padding: 35px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .contact p {
-      margin: 12px 0;
-    }
-
-    .contact a {
-      color: #111;
-    }
-
-    .disclaimer {
-      background: #eeeeee;
-      padding: 30px 20px;
-      font-size: 13px;
-      color: #555;
-      text-align: center;
-    }
-
-    footer {
-      background: #101010;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 31px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Tesla X Space Model</h1>
+    <div class="navbar">
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+        <!-- LOGO -->
+        <a href="#home" class="logo">
+            <div class="logo-icon">TXS</div>
+
+            <div class="logo-text">
+                TESLA X <span>SPACE MODEL</span>
+            </div>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
 </header>
 
 
+<!-- HERO -->
 <section class="hero" id="home">
 
-  <h2>Building Opportunities. Supporting Growth.</h2>
+    <div class="hero-content">
 
-  <p>
-    Tesla X Space Model is a modern business platform focused on
-    investment opportunities, automobile sales, cryptocurrency,
-    financial development and related business services.
-  </p>
+        <div class="badge">
+            BUSINESS • AUTOMOBILE • DIGITAL SERVICES
+        </div>
 
-  <a class="button"
-     href="https://wa.me/27618285727"
-     target="_blank">
-     Chat With Us on WhatsApp
-  </a>
+        <h1>
+            Building <span>Opportunities.</span><br>
+            Supporting Growth.
+        </h1>
+
+        <p>
+            Welcome to Tesla X Space Model — a modern business platform
+            focused on business opportunities, automobile sales,
+            cryptocurrency services, financial development and
+            professional business support.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#services" class="btn primary">
+                Explore Our Services
+            </a>
+
+            <a href="https://wa.me/27618285727"
+               class="btn secondary"
+               target="_blank">
+                Chat With Us
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<section id="about">
+<!-- ABOUT -->
+<section class="about" id="about">
 
-  <h2>About Tesla X Space Model</h2>
+    <div class="section-title">
+        <h2>About Us</h2>
+        <p>Discover Tesla X Space Model</p>
+    </div>
 
-  <div class="about">
+    <div class="about-box">
 
-    <p>
-      Tesla X Space Model is a growing business platform committed
-      to providing professional services and connecting individuals
-      with opportunities across different areas of business and finance.
-    </p>
+        <p>
+            Tesla X Space Model is a business platform created to
+            connect people with business opportunities, automobile
+            sales and digital financial services.
+        </p>
 
-    <br>
+        <p>
+            Our goal is to provide useful information, professional
+            support and opportunities that can help individuals
+            make informed decisions about their business and finances.
+        </p>
 
-    <p>
-      Our areas of focus include investment opportunities, automobile
-      sales, cryptocurrency trading, financial development and
-      insurance-related services.
-    </p>
+        <p>
+            We believe in continuous learning, responsible decision
+            making and building long-term value.
+        </p>
 
-    <br>
-
-    <p>
-      We believe that access to useful information, responsible
-      decision-making and quality customer support are important
-      foundations for long-term growth.
-    </p>
-
-  </div>
+    </div>
 
 </section>
 
 
-<section id="services">
+<!-- SERVICES -->
+<section class="services" id="services">
 
-  <h2>Our Services</h2>
-
-  <div class="services">
-
-    <div class="service">
-      <h3>Investment</h3>
-
-      <p>
-        We provide information and support relating to investment
-        opportunities and help clients understand available options
-        before making financial decisions.
-      </p>
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Explore what Tesla X Space Model offers</p>
     </div>
 
+    <div class="service-grid">
 
-    <div class="service">
-      <h3>Automobile Sales</h3>
+        <div class="service-card">
+            <div class="service-icon">💼</div>
+            <h3>Investment Information</h3>
+            <p>
+                Information and guidance about investment opportunities
+                and responsible financial decision-making.
+            </p>
+        </div>
 
-      <p>
-        We assist customers interested in automobile sales by
-        providing information and support throughout the purchasing
-        process.
-      </p>
+        <div class="service-card">
+            <div class="service-icon">🚘</div>
+            <h3>Automobile Sales</h3>
+            <p>
+                Connecting customers with automobile sales opportunities
+                and helping them make informed purchasing decisions.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">₿</div>
+            <h3>Cryptocurrency</h3>
+            <p>
+                Cryptocurrency-related information and support,
+                including education about digital assets and trading.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📈</div>
+            <h3>Financial Development</h3>
+            <p>
+                Resources and guidance designed to help people improve
+                their financial knowledge and explore opportunities.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🛡️</div>
+            <h3>Insurance Assistance</h3>
+            <p>
+                General information and assistance relating to
+                insurance options and financial protection.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🤝</div>
+            <h3>Business Consultation</h3>
+            <p>
+                Business discussions, opportunity assessment and
+                general support for people exploring new ventures.
+            </p>
+        </div>
+
     </div>
-
-
-    <div class="service">
-      <h3>Cryptocurrency Trading</h3>
-
-      <p>
-        We provide information and support relating to cryptocurrency
-        markets and digital assets for individuals interested in
-        understanding this evolving financial sector.
-      </p>
-    </div>
-
-
-    <div class="service">
-      <h3>Financial Development</h3>
-
-      <p>
-        We help individuals explore business and financial opportunities
-        while encouraging responsible financial planning and informed
-        decision-making.
-      </p>
-    </div>
-
-
-    <div class="service">
-      <h3>Insurance Services</h3>
-
-      <p>
-        We provide information and assistance relating to insurance
-        services and help clients understand available options.
-      </p>
-    </div>
-
-
-    <div class="service">
-      <h3>Business Consultation</h3>
-
-      <p>
-        Contact us to learn more about our services, business activities
-        and available opportunities.
-      </p>
-    </div>
-
-  </div>
 
 </section>
 
 
-<section id="why-us">
+<!-- WHY US -->
+<section class="why">
 
-  <h2>Why Choose Us?</h2>
+    <div class="section-title">
+        <h2>Why Choose Us?</h2>
+        <p>Our approach to business</p>
+    </div>
 
-  <div class="why">
+    <div class="why-grid">
 
-    <p>
-      <strong>Professional Service:</strong>
-      We aim to provide clear information and responsive customer support.
-    </p>
+        <div class="why-item">
+            <h3>Professional Approach</h3>
+            <p>
+                We aim to communicate clearly and provide useful
+                business information.
+            </p>
+        </div>
 
-    <p>
-      <strong>Customer Focused:</strong>
-      We listen to our clients and strive to provide useful solutions
-      based on their needs.
-    </p>
+        <div class="why-item">
+            <h3>Customer Focus</h3>
+            <p>
+                We focus on understanding customer needs and
+                providing helpful support.
+            </p>
+        </div>
 
-    <p>
-      <strong>Multiple Services:</strong>
-      Our platform covers investment, automobiles, cryptocurrency,
-      financial development and insurance-related services.
-    </p>
+        <div class="why-item">
+            <h3>Growth Mindset</h3>
+            <p>
+                We believe continuous learning and responsible
+                decisions are important for long-term growth.
+            </p>
+        </div>
 
-    <p>
-      <strong>Responsible Approach:</strong>
-      We encourage clients to understand opportunities, risks and
-      relevant terms before making financial decisions.
-    </p>
+        <div class="why-item">
+            <h3>Easy Communication</h3>
+            <p>
+                Contact us directly through WhatsApp or email
+                to discuss your needs.
+            </p>
+        </div>
 
-  </div>
-
-</section>
-
-
-<section>
-
-  <h2>Our Mission</h2>
-
-  <div class="about">
-
-    <p>
-      Our mission is to build a professional business platform that
-      connects people with opportunities, provides useful information
-      and supports individuals as they work toward their business
-      and financial goals.
-    </p>
-
-  </div>
+    </div>
 
 </section>
 
 
-<section id="contact">
+<!-- CTA -->
+<section class="cta">
 
-  <h2>Contact Us</h2>
-
-  <div class="contact">
-
-    <p>
-      <strong>Business:</strong>
-      Tesla X Space Model
-    </p>
+    <h2>Ready to Get Started?</h2>
 
     <p>
-      <strong>Email:</strong>
-      <a href="mailto:Spacemodelteslax@gmail.com">
-        Spacemodelteslax@gmail.com
-      </a>
+        Have a question or want to learn more about our services?
+        Contact Tesla X Space Model today.
     </p>
 
-    <p>
-      <strong>WhatsApp:</strong>
-      +27 61 828 5727
-    </p>
-
-    <a class="button"
-       href="https://wa.me/27618285727"
+    <a href="https://wa.me/27618285727"
+       class="btn primary"
        target="_blank">
-       Contact Us on WhatsApp
+        Contact Us on WhatsApp
     </a>
 
-  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Let's connect</p>
+    </div>
+
+    <div class="contact-box">
+
+        <div class="contact-item">
+            <strong>WhatsApp</strong>
+
+            <a href="https://wa.me/27618285727"
+               target="_blank">
+                +27 61 828 5727
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <strong>Email</strong>
+
+            <a href="mailto:Spacemodelteslax@gmail.com">
+                Spacemodelteslax@gmail.com
+            </a>
+        </div>
+
+    </div>
 
 </section>
 
 
-<div class="disclaimer">
+<!-- DISCLAIMER -->
+<section class="disclaimer">
 
-  <strong>Important Information</strong>
+    <p>
+        <strong>Important Information:</strong>
+        Investment and cryptocurrency activities involve financial risk
+        and may result in loss. Information provided on this website
+        should not be considered a guarantee of profit or a substitute
+        for professional financial advice. Customers should conduct
+        their own research and make decisions based on their individual
+        circumstances. Insurance-related services are subject to
+        applicable licensing and regulatory requirements.
+    </p>
 
-  <p>
-    Investment and cryptocurrency activities involve financial risk.
-    Tesla X Space Model does not guarantee profits or financial returns.
-    Clients should conduct appropriate research and consider seeking
-    professional financial advice before making investment decisions.
-  </p>
-
-</div>
+</section>
 
 
+<!-- FOOTER -->
 <footer>
 
-  <p>
-    © 2026 Tesla X Space Model. All Rights Reserved.
-  </p>
+    <p>
+        © 2026 Tesla X Space Model. All Rights Reserved.
+    </p>
+
+    <p>
+        Business • Automobile • Digital Services
+    </p>
 
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/27618285727"
+   class="whatsapp"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+    ☎
+</a>
 
 </body>
 </html>
